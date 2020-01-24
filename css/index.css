@@ -194,7 +194,6 @@ nav a {
 }
 @media (max-width:500px) {
   .btn {
-    width: 100vw;
-    border-radius: 0px;
+    border-radius: 30px;
   }
 }
