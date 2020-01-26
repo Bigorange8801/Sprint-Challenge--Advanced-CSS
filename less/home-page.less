@@ -1,6 +1,5 @@
 // Home Content
-
-.home {
+ .home {
 
   .intro {
 
@@ -45,6 +44,11 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    
+    @media @mobile{
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
     .walk-text {
       width: 50%;
@@ -55,23 +59,28 @@
 
       p {
         margin-bottom: 26px;
-      }
-
-      .btn {
+        @media @mobile{
+          display: flex;
+            width: 70vw;  
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+     
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+        @media @mobile{
+            width: 70vw;
+        }
       }
     }
   }
+
 }// home
 h1{
   font-size: 4.4rem;
@@ -99,7 +108,7 @@ nav{
    padding-bottom: 12px;
  }
  .btn{
-   .border(20px);
+   .border(40px);
    background: @main-font-color;
    color:white;
    padding: 15px 32px;
@@ -107,9 +116,15 @@ nav{
    text-decoration: none;
    display: inline-block;
    .font(20px);
-   @media @phone{
-    width:100vw;
-    .border(0px);
-  }
-   
+   @media @mobile{
+    width: 70vw;
+    border-radius: 0px;{
+      .btn:hover{
+        color:black;
+      }
+    }
  }
+
+}
+   
+ 

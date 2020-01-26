@@ -1,3 +1,96 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -26,7 +119,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -41,16 +134,16 @@ html {
 }
 html,
 body {
-  font-family: 'Ubuntu', sans-serif;
-  color: #5E6164;
+  font-family: "Ubuntu", sans-serif;
+  color: #5e6164;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Russo One', sans-serif;
-  color: #23293B;
+  font-family: "Russo One", sans-serif;
+  color: #23293b;
 }
 h2 {
   font-size: 3.2rem;
@@ -70,13 +163,15 @@ p {
 .btn:hover {
   background: #77abff;
   box-shadow: #3e3f42;
+  color: black;
 }
 a:hover {
   background: #77abff;
   box-shadow: #3e3f42;
+  color: green;
 }
 footer {
-  color: #22283B;
+  color: #22283b;
   background: #f4f4f4;
   padding: 20px 0;
   border: 1px double #e0e0e0;
@@ -96,24 +191,11 @@ footer {
   flex-wrap: wrap;
   width: 100%;
 }
-@media (max-width:500px) {
-  .home .space-images .sky {
-    display: none;
-  }
-  .home .space-images .launch {
-    display: none;
-  }
-}
 .home .space-images img {
   width: 28%;
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
-}
-@media (max-width:500px) {
-  .home .space-images img {
-    width: 100vw;
-  }
 }
 .home .visit-planets {
   padding: 15px;
@@ -131,8 +213,9 @@ footer {
   display: flex;
   justify-content: center;
 }
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .home .walk {
+    display: flex;
     flex-direction: column-reverse;
   }
 }
@@ -145,18 +228,24 @@ footer {
 .home .walk .walk-text p {
   margin-bottom: 26px;
 }
+@media (max-width: 500px) {
+  .home .walk .walk-text p {
+    display: flex;
+    width: 70vw;
+  }
+}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
 }
-.home .walk img {
+.home .walk .walk-img img {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
-@media (max-width:500px) {
-  .home .walk img {
-    width: 100vw;
+@media (max-width: 500px) {
+  .home .walk .walk-img img {
+    width: 70vw;
   }
 }
 h1 {
@@ -177,14 +266,14 @@ nav a {
   width: 85px;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #5E6164;
+  color: #5e6164;
   text-decoration: none;
   padding-top: 8px;
   padding-bottom: 12px;
 }
 .btn {
-  border-radius: 20px;
-  background: #5E6164;
+  border-radius: 40px;
+  background: #5e6164;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -192,8 +281,9 @@ nav a {
   display: inline-block;
   font-size: 20px;
 }
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .btn {
-    border-radius: 30px;
+    width: 70vw;
+    border-radius: 0px;
   }
 }
